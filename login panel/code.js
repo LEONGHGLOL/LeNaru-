@@ -1,16 +1,24 @@
-const username = "LeNaru"
-const paswort = "LEONGHGLOL"
+// Globale Variablen 
+const admin_username = "LeNaru"
+const admin_password = "LEONGHGLOL"
 
-function login(){
-    let usernameInput = document.getElementById("username").value;
-    let paswortInput = document.getElementById("paswort").value;
-    let messageInput = document.getElementById("message");
-
-    if (usernameInput === username && paswortInput === paswort) {
-        messageInput.style.color = "Lime";
-        message.textContent = "Login erfolgt";
-    } else {
-        message.style.color = "Red";
-        message.textContent = "login fehlgeschlagen";
+function login()
+{ 
+    let input_username = document.getElementById("username").value;
+    let input_passwort = document.getElementById("paswort").value;
+    
+    // Was auch immer das hier wird :)
+    let statusMessage = document.getElementById("message");
+    
+    // Falls Login-Erfolgreich ist
+    if (input_passwort == admin_password && admin_username == input_username) 
+    {
+        statusMessage.style.color = "Lime";
+        statusMessage.textContent = "Login erfolgt";
+    } 
+    else 
+    {
+        statusMessage.style.color = "Red";
+        statusMessage.textContent = "Login fehlgeschlagen";
     }
 }
